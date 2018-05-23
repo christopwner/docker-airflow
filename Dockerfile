@@ -1,5 +1,8 @@
 FROM python:2
 
+# rsync
+RUN apt update && apt install rsync -y
+
 # sonar
 ADD sonar-scanner-3.1.0.1141-linux/ /opt/sonar-scanner/
 ENV PATH "$PATH:/opt/sonar-scanner/bin"
